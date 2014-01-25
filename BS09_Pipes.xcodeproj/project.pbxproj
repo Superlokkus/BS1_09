@@ -28,6 +28,7 @@
 		282B2D321893C9CE000EBEF9 /* BS09_Pipes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BS09_Pipes; sourceTree = BUILT_PRODUCTS_DIR; };
 		282B2D351893C9CE000EBEF9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		282B2D371893C9CE000EBEF9 /* BS09_Pipes.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BS09_Pipes.1; sourceTree = "<group>"; };
+		287736951894095B00A9FBE0 /* bs1-prak09.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "bs1-prak09.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				282B2D351893C9CE000EBEF9 /* main.c */,
+				287736951894095B00A9FBE0 /* bs1-prak09.pdf */,
 				282B2D371893C9CE000EBEF9 /* BS09_Pipes.1 */,
 			);
 			path = BS09_Pipes;
@@ -227,6 +229,7 @@
 				282B2D3D1893C9CE000EBEF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
