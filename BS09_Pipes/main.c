@@ -28,6 +28,7 @@ static inline char rot13(char torotate)
 
 int main(int argc, const char * argv[])
 {
+    printf("Please type in word which should be ROT13 encrypted or \"quit\"\n");
     int parent2child[2];
     if (pipe(parent2child)) {
         perror("Pipe failed");
