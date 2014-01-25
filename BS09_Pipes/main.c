@@ -27,15 +27,22 @@ int main(int argc, const char * argv[])
 {
     
     char cbuff[buffsize];
-    fgets(cbuff, buffsize, stdin);
     
-    int i;
+    do {
+        fgets(cbuff, buffsize, stdin);
+        
+        char input[strlen(cbuff)+1];
+        strcpy(input, cbuff);
+        
+        int i;
+        for (i=0; i < strlen(input); i++) {
+            input[i] = rot13(input[i]);
+        }
+        
+        printf("%s",input);
+        
+    } while (strstr(cbuff, "quit") == NULL);
     
-    for (i=0; i < strlen(cbuff); i++) {
-        cbuff[i] = rot13(cbuff[i]);
-    }
-
-    printf("%s\n",cbuff);
     
     return 0;
 }
