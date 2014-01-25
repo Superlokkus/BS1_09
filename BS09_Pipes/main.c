@@ -11,15 +11,16 @@
 
 #define buffsize 128
 
-/*inline*/ void rot13(char* restrict torotate)
+static inline char rot13(char torotate)
 {
-    if ('A' <= *torotate && *torotate <= 'Z') {
-        *torotate = (*torotate -'A'+13)%26 + 'A';
+    if ('A' <= torotate && torotate <= 'Z') {
+        return torotate = (torotate -'A'+13)%26 + 'A';
     }
-    else if ('a' <= *torotate && *torotate <= 'z')
+    else if ('a' <= torotate && torotate <= 'z')
     {
-        *torotate = (*torotate -'a'+13)%26 + 'a';
+        return torotate = (torotate -'a'+13)%26 + 'a';
     }
+    return torotate;
 }
 
 int main(int argc, const char * argv[])
@@ -31,7 +32,7 @@ int main(int argc, const char * argv[])
     int i;
     
     for (i=0; i < strlen(cbuff); i++) {
-        rot13(&cbuff[i]);
+        cbuff[i] = rot13(cbuff[i]);
     }
 
     printf("%s\n",cbuff);
