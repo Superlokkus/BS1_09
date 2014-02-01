@@ -40,7 +40,7 @@ int main(int argc, const char * argv[])
         perror("Forking failed");
         return EXIT_FAILURE;
     }
-    else if (mypid == 0)
+    else if (mypid > 0)
     {
         //Parent
         if (close(parent2child[0])) {
